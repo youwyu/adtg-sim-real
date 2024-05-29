@@ -39,6 +39,27 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
+  <style>
+    .video-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .video-item {
+        text-align: center;
+    }
+    .video1 {
+        width: 50%; /* Set specific width for the first video */
+    }
+    .video2 {
+        width: 50%; /* Set specific width for the second video */
+    }
+    video {
+        width: 100%; /* Ensure the video fits within the item container */
+        height: auto; /* Maintain aspect ratio */
+    }
+  </style>
 </head>
 <body>
 
@@ -123,25 +144,25 @@
 <section class="hero teaser">
     <div class="container is-max-desktop">
         <div class="hero-body video-container">
-            <div class="video-item">
+            <div class="video-item video1">
                 <h2 class="subtitle has-text-centered">
                   Adaptive Difficulty
                 </h2>
                 <h2 class="subtitle has-text-centered">
                   Adjust EASY:HARD Contributions
                 </h2>
-                <video width="800" height="360" controls id="teaser1" autoplay muted loop playsinline>
+                <video id="teaser1" autoplay muted loop playsinline>
                     <source src="./static/videos/interpolation.mp4" type="video/mp4">
                 </video>
             </div>
-            <div class="video-item">
+            <div class="video-item video2">
                 <h2 class="subtitle has-text-centered">
                   Adaptive Diversity
                 </h2>
                 <h2 class="subtitle has-text-centered">
                   Low    ---   K↑  ---    High
                 </h2>
-                <video width="800" height="360" controls id="teaser2" autoplay muted loop playsinline>
+                <video id="teaser2" autoplay muted loop playsinline>
                     <source src="./static/videos/step.mp4" type="video/mp4">
                 </video>
             </div>
