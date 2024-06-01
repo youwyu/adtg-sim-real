@@ -12,7 +12,7 @@ var new_interp_images = [];
 var step_interp_images = [];
 
 function preloadInterpolationImages(base, interp_images, num_frames) {
-    if (num_frames == 240 || num_frames == 100)
+    if (num_frames == 240)
     {
         for (var i = 0; i < num_frames; i++) {
             var path = base + '/' + String(i).padStart(6, '0') + '.jpg';
@@ -20,10 +20,18 @@ function preloadInterpolationImages(base, interp_images, num_frames) {
             interp_images[i].src = path;
           }
     }
-    else
+    else if (num_frames == 99)
     {
         for (var i = 1; i < num_frames + 1; i++) {
             var path = base + '/' + String(i).padStart(6, '0') + '.png';
+            interp_images[i] = new Image();
+            interp_images[i].src = path;
+          }
+    }
+    else if (num_frames == 100)
+    {
+        for (var i = 1; i < num_frames + 1; i++) {
+            var path = base + '/' + String(i).padStart(6, '0') + '.jpg';
             interp_images[i] = new Image();
             interp_images[i].src = path;
           }
