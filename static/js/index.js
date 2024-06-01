@@ -5,7 +5,7 @@ var INTERP_BASE_NEW = "./static/interpolation/new_stacked";
 var NUM_OLD_INTERP_FRAMES = 240;
 var NUM_NEW_INTERP_FRAMES = 300;  // Example for different frame count
 
-var old_interp_images = [];
+var interp_images = [];
 var new_interp_images = [];
 
 function preloadInterpolationImages(base, interp_images, num_frames) {
@@ -56,14 +56,14 @@ $(document).ready(function() {
   }
 
   // Preload images
-  preloadInterpolationImages(INTERP_BASE, old_interp_images, NUM_OLD_INTERP_FRAMES);
+  preloadInterpolationImages(INTERP_BASE, interp_images, NUM_OLD_INTERP_FRAMES);
   preloadInterpolationImages(INTERP_BASE_NEW, new_interp_images, NUM_NEW_INTERP_FRAMES);
 
   // Old interpolation slider
   $('#old-interpolation-slider').on('input', function(event) {
-    setInterpolationImage(old_interp_images, 'old-interpolation-image-wrapper', this.value);
+    setInterpolationImage(interp_images, 'old-interpolation-image-wrapper', this.value);
   });
-  setInterpolationImage(old_interp_images, 'old-interpolation-image-wrapper', 0);
+  setInterpolationImage(interp_images, 'old-interpolation-image-wrapper', 0);
   $('#old-interpolation-slider').prop('max', NUM_OLD_INTERP_FRAMES - 1);
 
   // New interpolation slider
