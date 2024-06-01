@@ -61,9 +61,9 @@ $(document).ready(function() {
 
   // Old interpolation slider
   $('#interpolation-slider').on('input', function(event) {
-    setInterpolationImage(interp_images, 'old-interpolation-image-wrapper', this.value);
+    setInterpolationImage(interp_images, 'interpolation-image-wrapper', this.value);
   });
-  setInterpolationImage(interp_images, 'old-interpolation-image-wrapper', 0);
+  setInterpolationImage(interp_images, 'interpolation-image-wrapper', 0);
   $('#interpolation-slider').prop('max', NUM_OLD_INTERP_FRAMES - 1);
 
   // New interpolation slider
