@@ -222,6 +222,42 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h4 class="title is-4">Animation: Adaptive Diffusion Terrain Generator</h4>
+
+        <!-- Interpolating. -->
+        <h5 class="title is-5">Adaptive Difficulty</h5>
+        <div class="content has-text-justified">
+          <p>
+            by adjusting contributions of EASY and HARD samples to generate samples tailored to RL policy's current performance.
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column interpolation-video-column">
+            <div id="step-interpolation-image-wrapper">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                  id="step-interpolation-slider"
+                  step="1" min="0" max="100" value="0" type="range">
+          </div>
+        </div>
+        <p>
+          If it shows LOADING, just drag the progress bar.
+        </p>
+        <br/>
+        <!--/ Interpolating. -->
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+  </div>
+</section>
+
 <!-- <section class="hero teaser">
     <div class="container is-max-desktop">
         <div class="hero-body video-container">
