@@ -2,7 +2,7 @@ window.HELP_IMPROVE_VIDEOJS = false;
 
 var INTERP_BASE = "./static/interpolation/stacked";
 var INTERP_BASE_NEW = "./static/interpolation/interp";
-var INTERP_BASE_STEP = "./static/interpolation/step";
+var INTERP_BASE_STEP = "./static/interpolation/step1";
 var NUM_OLD_INTERP_FRAMES = 240;
 var NUM_NEW_INTERP_FRAMES = 99;  // Example for different frame count
 var NUM_STEP_INTERP_FRAMES = 100;  // Example for different frame count
