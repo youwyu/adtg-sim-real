@@ -2,7 +2,7 @@ window.HELP_IMPROVE_VIDEOJS = false;
 
 var INTERP_BASE = "./static/interpolation/stacked";
 var INTERP_BASE_NEW = "./static/interpolation/interp";
-var INTERP_BASE_STEP = "./static/interpolation/step1";
+var INTERP_BASE_STEP = "./static/interpolation/step";
 var NUM_OLD_INTERP_FRAMES = 240;
 var NUM_NEW_INTERP_FRAMES = 99;  // Example for different frame count
 var NUM_STEP_INTERP_FRAMES = 100;  // Example for different frame count
@@ -78,16 +78,8 @@ $(document).ready(function() {
   }
 
   // Preload images
-  preloadInterpolationImages(INTERP_BASE, interp_images, NUM_OLD_INTERP_FRAMES);
   preloadInterpolationImages(INTERP_BASE_NEW, new_interp_images, NUM_NEW_INTERP_FRAMES);
   preloadInterpolationImages(INTERP_BASE_STEP, step_interp_images, NUM_STEP_INTERP_FRAMES);
-
-  // Old interpolation slider
-  $('#interpolation-slider').on('input', function(event) {
-    setInterpolationImage(interp_images, 'interpolation-image-wrapper', this.value);
-  });
-  setInterpolationImage(interp_images, 'interpolation-image-wrapper', 0);
-  $('#interpolation-slider').prop('max', NUM_OLD_INTERP_FRAMES - 1);
 
   // New interpolation slider
   $('#new-interpolation-slider').on('input', function(event) {
@@ -95,13 +87,6 @@ $(document).ready(function() {
   });
   setInterpolationImage(new_interp_images, 'new-interpolation-image-wrapper', 0);
   $('#new-interpolation-slider').prop('max', NUM_NEW_INTERP_FRAMES - 1);
-
-  // New interpolation slider Copy
-  $('#new-copy-interpolation-slider').on('input', function(event) {
-    setInterpolationImage(new_interp_images, 'new-copy-interpolation-image-wrapper', this.value);
-  });
-  setInterpolationImage(new_interp_images, 'new-copy-interpolation-image-wrapper', 0);
-  $('#new-copy-interpolation-slider').prop('max', NUM_NEW_INTERP_FRAMES - 1);
 
   // Step interpolation slider
   $('#step-interpolation-slider').on('input', function(event) {
