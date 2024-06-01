@@ -2,13 +2,14 @@ window.HELP_IMPROVE_VIDEOJS = false;
 
 var INTERP_BASE = "./static/interpolation/stacked";
 var INTERP_BASE_NEW = "./static/interpolation/new_stacked";
-var NUM_INTERP_FRAMES = 240;
+var NUM_OLD_INTERP_FRAMES = 240;
+var NUM_NEW_INTERP_FRAMES = 300;  // Example for different frame count
 
-var interp_images = [];
-var interp_base_interp_images = [];
+var old_interp_images = [];
+var new_interp_images = [];
 
-function preloadInterpolationImages(base, interp_images) {
-  for (var i = 0; i < NUM_INTERP_FRAMES; i++) {
+function preloadInterpolationImages(base, interp_images, num_frames) {
+  for (var i = 0; i < num_frames; i++) {
     var path = base + '/' + String(i).padStart(6, '0') + '.jpg';
     interp_images[i] = new Image();
     interp_images[i].src = path;
@@ -55,22 +56,22 @@ $(document).ready(function() {
   }
 
   // Preload images
-  preloadInterpolationImages(INTERP_BASE, interp_images);
-  preloadInterpolationImages(INTERP_BASE_NEW, interp_base_interp_images);
+  preloadInterpolationImages(INTERP_BASE, old_interp_images, NUM_OLD_INTERP_FRAMES);
+  preloadInterpolationImages(INTERP_BASE_NEW, new_interp_images, NUM_NEW_INTERP_FRAMES);
 
   // Old interpolation slider
   $('#old-interpolation-slider').on('input', function(event) {
-    setInterpolationImage(interp_images, 'old-interpolation-image-wrapper', this.value);
+    setInterpolationImage(old_interp_images, 'old-interpolation-image-wrapper', this.value);
   });
-  setInterpolationImage(interp_images, 'old-interpolation-image-wrapper', 0);
-  $('#old-interpolation-slider').prop('max', NUM_INTERP_FRAMES - 1);
+  setInterpolationImage(old_interp_images, 'old-interpolation-image-wrapper', 0);
+  $('#old-interpolation-slider').prop('max', NUM_OLD_INTERP_FRAMES - 1);
 
   // New interpolation slider
   $('#new-interpolation-slider').on('input', function(event) {
-    setInterpolationImage(interp_base_interp_images, 'new-interpolation-image-wrapper', this.value);
+    setInterpolationImage(new_interp_images, 'new-interpolation-image-wrapper', this.value);
   });
-  setInterpolationImage(interp_base_interp_images, 'new-interpolation-image-wrapper', 0);
-  $('#new-interpolation-slider').prop('max', NUM_INTERP_FRAMES - 1);
+  setInterpolationImage(new_interp_images, 'new-interpolation-image-wrapper', 0);
+  $('#new-interpolation-slider').prop('max', NUM_NEW_INTERP_FRAMES - 1);
 
   bulmaSlider.attach();
 });
