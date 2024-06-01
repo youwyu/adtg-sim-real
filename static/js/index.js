@@ -60,11 +60,11 @@ $(document).ready(function() {
   preloadInterpolationImages(INTERP_BASE_NEW, new_interp_images, NUM_NEW_INTERP_FRAMES);
 
   // Old interpolation slider
-  $('#old-interpolation-slider').on('input', function(event) {
+  $('#interpolation-slider').on('input', function(event) {
     setInterpolationImage(interp_images, 'old-interpolation-image-wrapper', this.value);
   });
   setInterpolationImage(interp_images, 'old-interpolation-image-wrapper', 0);
-  $('#old-interpolation-slider').prop('max', NUM_OLD_INTERP_FRAMES - 1);
+  $('#interpolation-slider').prop('max', NUM_OLD_INTERP_FRAMES - 1);
 
   // New interpolation slider
   $('#new-interpolation-slider').on('input', function(event) {
