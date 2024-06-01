@@ -12,7 +12,7 @@ var new_interp_images = [];
 var step_interp_images = [];
 
 function preloadInterpolationImages(base, interp_images, num_frames) {
-    if (num_frames == 240)
+    if (num_frames == 240 || num_frames == 100)
     {
         for (var i = 0; i < num_frames; i++) {
             var path = base + '/' + String(i).padStart(6, '0') + '.jpg';
