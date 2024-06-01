@@ -188,6 +188,56 @@
   </div>
 </section>
 
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h4 class="title is-4">Animation: Adaptive Diffusion Terrain Generator</h4>
+
+        <!-- Interpolating. -->
+        <h5 class="title is-5">Adaptive Difficulty</h5>
+        <div class="content has-text-justified">
+          <p>
+            by adjusting contributions of EASY and HARD samples to generate samples tailored to RL policy's current performance.
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/easy.png"
+                class="interpolation-image"
+                alt="Interpolate start reference image."/>
+            <p>Easy Environment</p>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="new-interpolation-image-wrapper">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                  id="new-interpolation-slider"
+                  step="1" min="0" max="100" value="0" type="range">
+          </div>
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/hard.png"
+                class="interpolation-image"
+                alt="Interpolation end reference image."/>
+            <p class="is-bold">Hard Environment</p>
+          </div>
+        </div>
+        <p>
+          If it shows LOADING, just drag the progress bar.
+        </p>
+        <br/>
+        <!--/ Interpolating. -->
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+  </div>
+</section>
+
+
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Animation. -->
