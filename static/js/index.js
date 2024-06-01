@@ -96,6 +96,13 @@ $(document).ready(function() {
   setInterpolationImage(new_interp_images, 'new-interpolation-image-wrapper', 0);
   $('#new-interpolation-slider').prop('max', NUM_NEW_INTERP_FRAMES - 1);
 
+  // New interpolation slider Copy
+  $('#new-copy-interpolation-slider').on('input', function(event) {
+    setInterpolationImage(new_interp_images, 'new-copy-interpolation-image-wrapper', this.value);
+  });
+  setInterpolationImage(new_interp_images, 'new-copy-interpolation-image-wrapper', 0);
+  $('#new-copy-interpolation-slider').prop('max', NUM_NEW_INTERP_FRAMES - 1);
+
   // Step interpolation slider
   $('#step-interpolation-slider').on('input', function(event) {
     setInterpolationImage(step_interp_images, 'step-interpolation-image-wrapper', this.value);
