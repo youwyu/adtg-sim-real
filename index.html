@@ -177,31 +177,53 @@
           </div>
         </div>
         <p>
-          by adjusting contributions of EASY and HARD samples to generate samples tailored to RL policy's current performance.
+          If it shows LOADING, just drag the progress bar.
         </p>
         <br/>
         <!--/ Interpolating. -->
 
-        <!-- Re-rendering. -->
-        <!-- <h3 class="title is-4">Re-rendering the input video</h3>
+      </div>
+    </div>
+    <!--/ Animation. -->
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h4 class="title is-4">Animation: Adaptive Diffusion Terrain Generator</h4>
+
+        <!-- Interpolating. -->
+        <h5 class="title is-5">Adaptive Difficulty</h5>
         <div class="content has-text-justified">
           <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
+            by adjusting contributions of EASY and HARD samples to generate samples tailored to RL policy's current performance.
           </p>
         </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                controls
-                muted
-                preload
-                playsinline
-                width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div> -->
-        <!--/ Re-rendering. -->
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/easy.png"
+                class="interpolation-image"
+                alt="Interpolate start reference image."/>
+            <p>Easy Environment</p>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="new-interpolation-image-wrapper">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                  id="new-interpolation-slider"
+                  step="1" min="0" max="100" value="0" type="range">
+          </div>
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/hard.png"
+                class="interpolation-image"
+                alt="Interpolation end reference image."/>
+            <p class="is-bold">Hard Environment</p>
+          </div>
+        </div>
+        <p>
+          If it shows LOADING, just drag the progress bar.
+        </p>
+        <br/>
+        <!--/ Interpolating. -->
 
       </div>
     </div>
