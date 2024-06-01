@@ -2,11 +2,14 @@ window.HELP_IMPROVE_VIDEOJS = false;
 
 var INTERP_BASE = "./static/interpolation/stacked";
 var INTERP_BASE_NEW = "./static/interpolation/interp";
+var INTERP_BASE_STEP = "./static/interpolation/step";
 var NUM_OLD_INTERP_FRAMES = 240;
 var NUM_NEW_INTERP_FRAMES = 99;  // Example for different frame count
+var NUM_STEP_INTERP_FRAMES = 100;  // Example for different frame count
 
 var interp_images = [];
 var new_interp_images = [];
+var step_interp_images = [];
 
 function preloadInterpolationImages(base, interp_images, num_frames) {
     if (num_frames == 240)
@@ -69,6 +72,7 @@ $(document).ready(function() {
   // Preload images
   preloadInterpolationImages(INTERP_BASE, interp_images, NUM_OLD_INTERP_FRAMES);
   preloadInterpolationImages(INTERP_BASE_NEW, new_interp_images, NUM_NEW_INTERP_FRAMES);
+  preloadInterpolationImages(INTERP_BASE_STEP, step_interp_images, NUM_STEP_INTERP_FRAMES);
 
   // Old interpolation slider
   $('#interpolation-slider').on('input', function(event) {
@@ -83,6 +87,14 @@ $(document).ready(function() {
   });
   setInterpolationImage(new_interp_images, 'new-interpolation-image-wrapper', 0);
   $('#new-interpolation-slider').prop('max', NUM_NEW_INTERP_FRAMES - 1);
+
+  // Step interpolation slider
+  $('#step-interpolation-slider').on('input', function(event) {
+    setInterpolationImage(step_interp_images, 'step-interpolation-image-wrapper', this.value);
+  });
+  setInterpolationImage(step_interp_images, 'step-interpolation-image-wrapper', 0);
+  $('#step-interpolation-slider').prop('max', NUM_STEP_INTERP_FRAMES - 1);
+
 
   bulmaSlider.attach();
 });
