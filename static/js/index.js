@@ -70,15 +70,15 @@ $(document).ready(function() {
   }
 
   // Preload images
-  preloadInterpolationImages(INTERP_BASE_NEW, new_interp_images, NUM_NEW_INTERP_FRAMES);
+  // preloadInterpolationImages(INTERP_BASE_NEW, new_interp_images, NUM_NEW_INTERP_FRAMES);
   preloadInterpolationImages(INTERP_BASE_STEP, step_interp_images, NUM_STEP_INTERP_FRAMES);
 
   // New interpolation slider
-  $('#new-interpolation-slider').on('input', function(event) {
-    setInterpolationImage(new_interp_images, 'new-interpolation-image-wrapper', this.value);
-  });
-  setInterpolationImage(new_interp_images, 'new-interpolation-image-wrapper', 0);
-  $('#new-interpolation-slider').prop('max', NUM_NEW_INTERP_FRAMES - 1);
+  // $('#new-interpolation-slider').on('input', function(event) {
+  //   setInterpolationImage(new_interp_images, 'new-interpolation-image-wrapper', this.value);
+  // });
+  // setInterpolationImage(new_interp_images, 'new-interpolation-image-wrapper', 0);
+  // $('#new-interpolation-slider').prop('max', NUM_NEW_INTERP_FRAMES - 1);
 
   // Step interpolation slider
   $('#step-interpolation-slider').on('input', function(event) {
