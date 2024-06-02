@@ -82,9 +82,9 @@ $(document).ready(function() {
 
   // Step interpolation slider
   $('#step-interpolation-slider').on('input', function(event) {
-    setInterpolationImage(step_interp_images, 'step-interpolation-image-wrapper', this.value);
+    setInterpolationImage(new_interp_images, 'step-interpolation-image-wrapper', this.value);
   });
-  setInterpolationImage(step_interp_images, 'step-interpolation-image-wrapper', 0);
+  setInterpolationImage(new_interp_images, 'step-interpolation-image-wrapper', 0);
   $('#step-interpolation-slider').prop('max', NUM_STEP_INTERP_FRAMES - 1);
 
 
