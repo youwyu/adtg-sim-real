@@ -122,10 +122,16 @@
         <h4 class="title is-4">Animation: Adaptive Diffusion Terrain Generator</h4>
 
         <!-- Interpolating. -->
-        <h5 class="title is-5">Adaptive Difficulty</h5>
+        <h6 class="title is-6">Adaptive Difficulty</h6>
         <div class="content has-text-justified">
           <p>
-            by adjusting contributions of EASY and HARD samples to generate samples tailored to RL policy's current performance.
+            (TOP) by adjusting contributions of EASY and HARD samples to generate samples tailored to RL policy's current performance.
+          </p>
+        </div>
+        <h6 class="title is-6">Adaptive Diversity</h6>
+        <div class="content has-text-justified">
+          <p>
+            (BOTTOM 8) Low   ---   Forward Step K ↑  ---   High  (with 0.5 * Easy + 0.5 * Hard)
           </p>
         </div>
         <div class="columns is-vcentered interpolation-panel">
