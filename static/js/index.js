@@ -5,7 +5,7 @@ var INTERP_BASE_NEW = "./static/interpolation/interp";
 var INTERP_BASE_STEP = "./static/interpolation/step";
 var NUM_OLD_INTERP_FRAMES = 240;
 var NUM_NEW_INTERP_FRAMES = 99;  // Example for different frame count
-var NUM_STEP_INTERP_FRAMES = 100;  // Example for different frame count
+var NUM_STEP_INTERP_FRAMES = 99;  // Example for different frame count
 
 var interp_images = [];
 var new_interp_images = [];
