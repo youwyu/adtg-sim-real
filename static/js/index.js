@@ -23,7 +23,7 @@ function preloadInterpolationImages(base, interp_images, num_frames) {
     else
     {
         for (var i = 1; i < num_frames + 1; i++) {
-            var path = base + '/' + String(i).padStart(6, '0') + '.png';
+            var path = base + '/' + String(i).padStart(6, '0') + '.jpg';
             interp_images[i] = new Image();
             interp_images[i].src = path;
           }
