@@ -2,7 +2,7 @@ window.HELP_IMPROVE_VIDEOJS = false;
 
 var INTERP_BASE = "./static/interpolation/stacked";
 var INTERP_BASE_NEW = "./static/interpolation/interp";
-var INTERP_BASE_STEP = "./static/interpolation/step";
+var INTERP_BASE_STEP = "./static/interpolation/interp";
 var NUM_OLD_INTERP_FRAMES = 240;
 var NUM_NEW_INTERP_FRAMES = 99;  // Example for different frame count
 var NUM_STEP_INTERP_FRAMES = 100;  // Example for different frame count
@@ -20,18 +20,10 @@ function preloadInterpolationImages(base, interp_images, num_frames) {
             interp_images[i].src = path;
           }
     }
-    else if (num_frames == 99)
+    else
     {
         for (var i = 1; i < num_frames + 1; i++) {
             var path = base + '/' + String(i).padStart(6, '0') + '.png';
-            interp_images[i] = new Image();
-            interp_images[i].src = path;
-          }
-    }
-    else if (num_frames == 100)
-    {
-        for (var i = 1; i < num_frames + 1; i++) {
-            var path = base + '/' + String(i).padStart(6, '0') + '.jpg';
             interp_images[i] = new Image();
             interp_images[i].src = path;
           }
