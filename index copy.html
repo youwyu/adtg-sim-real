@@ -73,18 +73,14 @@
           </h1>
           <h3 class="title is-3 publication-title">for Autonomous Uneven Terrain Navigation
           </h3>
-          <div class="is-size-5 publication-authors"></div>
+          <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://https://www.linkedin.com/in/youwei-fisher/">Youwei Yu</a>,</span>
+              <a href="https://www.linkedin.com/in/youwei-fisher/">Youwei Yu</a>,</span>
             <span class="author-block">
-              <a href="https://https://junhongxu.github.io/">Junhong Xu</a>,</span>
+              <a href="https://junhongxu.github.io/">Junhong Xu</a>,</span>
             <span class="author-block">
-              <a href="https://https://vail.sice.indiana.edu/pages/lantaoliu.html">Lantao Liu</a>,
+              <a href="https://vail.sice.indiana.edu/pages/lantaoliu.html">Lantao Liu</a>
             </span>
-          </div>
-
-          <div class="is-size-5 publication-authors"></div>
-            <span class="author-block">Indiana University Bloomington</span>
           </div>
 
           <div class="column has-text-centered">
@@ -92,7 +88,7 @@
               <!-- PDF Link. -->
               <span class="link-block">
                 <a href="https://arxiv.org"
-                   class="external-link button is-normal is-rounded is-dark">
+                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
@@ -101,24 +97,33 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://youtu.be/nH96UIbxlpM"
-                   class="external-link button is-normal is-rounded is-dark">
+                <a href="https://youtu.be/rBbcDhKO824"
+                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
                   </span>
                   <span>Youtube</span>
                 </a>
               </span>
+              <span class="link-block"></span>
+                <a href="https://www.bilibili.com/video/BV1iitCeLEmP/?vd_source=4ef0ed9df6381e5a9e49baf09ced5f60"
+                    class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <img src="https://www.bilibili.com/favicon.ico" alt="Bilibili Icon" style="width: 24px; height: 24px; vertical-align: middle; position: relative; top: 3px;">
+                  </span>
+                  <span>BiliBili</span>
+                </a>
+              </span>
               <!-- Code Link. -->
-              <!-- <span class="link-block">
+              <span class="link-block">
                 <a href="https://github.com"
-                   class="external-link button is-normal is-rounded is-dark">
+                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Code (Comming Soon)</span>
                   </a>
-              </span> -->
+              </span>
 
           </div>
         </div>
@@ -281,13 +286,29 @@ Our experiments show that the policy trained by ADTG outperforms procedural gene
       </div>
     </div> -->
 
-    <div class="video-item video1 is-centered">
-      <h5 class="subtitle">
-        Elevation Environments in Descending Difficulty
-      </h5>
-      <video id="teaser1" autoplay muted loop playsinline>
-          <source src="./static/videos/terrains_animation_3d.mp4" type="video/mp4">
-      </video>
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <div class="content">
+          <h6 class="title is-6">Elevation Environments in Descending Difficulty</h6>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/terrains_animation_3d.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="columns is-centered has-text-centered">
+          <div class="column content">
+            <h6 class="title is-6">Reinforcement Learning Process</h6>
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/learning_history_histogram.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+      </div>
     </div>
 
 
